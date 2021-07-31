@@ -228,14 +228,14 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "ctrl+x",
+    "key": "x",
     "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+c",
+    "key": "c",
     "command": "copyRelativeFilePath",
-    "when": "filesExplorerFocus && !editorFocus & !inputFocus"
+    "when": "listFocus && !inputFocus"
   },
   {
     "key": "shift+alt+cmd+c",
