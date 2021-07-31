@@ -1,0 +1,276 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "cmd+y",
+    "command": "redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  // Copied from https://github.com/kentcdodds/ama/issues/406
+  // {
+  //   "comment": "This is just really handy. I use it all the time in Atom.",
+  //   "key": "shift+cmd+\\",
+  //   "command": "workbench.files.action.focusFilesExplorer"
+  // },
+  {
+    "comment": "Because I want enter to open the file, I need some way to rename it, this seemed as good as any other method. 'm' for 'move'",
+    "key": "m",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "comment": "This allows me to open the file on enter instead which makes more sense to me.",
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "comment": "This makes my zoom behavior more like chrome",
+    "key": "cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "comment": "This disables the enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
+    "key": "enter",
+    "command": "-acceptSelectedSuggestionOnEnter",
+    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  },
+  {
+    "comment": "This disables the tab key for autocomplete. Instead we have another one which only applies when not in snippet mode.",
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "cmd+shift+d",
+    "when": "editorTextFocus",
+    "command": "-editor.action.copyLinesDownAction"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-headwind.sortTailwindClasses",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-editor.action.joinLines"
+  },
+  {
+    "key": "cmd+k cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  // {
+  //   "key": "cmd+b",
+  //   "command": "-markdown.extension.editing.toggleBold",
+  //   "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  // },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.showAllEditors"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.terminal.splitInstance",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "leetcode.submitSolution"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "leetcode.testSolution"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {"key": "ctrl+w v", "command": "workbench.action.splitEditor"},
+  {"key": "ctrl+w s", "command": "workbench.action.splitEditorOrthogonal"},
+  {"key": "ctrl+w c", "command": "workbench.action.closeActiveEditor"},
+  {"key": "ctrl+w r", "command": "workbench.action.reopenClosedEditor"},
+  {
+    "key": "ctrl+w z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "x",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "copyRelativeFilePath",
+    "when": "filesExplorerFocus && !editorFocus & !inputFocus"
+  },
+  {
+    "key": "shift+alt+cmd+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "ctrl+cmd+p",
+    "command": "workbench.action.moveEditorToPreviousGroup"
+  }
+]
