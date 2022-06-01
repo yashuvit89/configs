@@ -4,6 +4,8 @@
 let mapleader = "\<Space>"
 call plug#begin()
 
+" test entry
+
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'airblade/vim-gitgutter'
