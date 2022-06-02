@@ -1,0 +1,158 @@
+"https://gist.github.com/plateauu/2850b551c934f4168fa4f6b56e8fb087"
+set incsearch
+set ignorecase
+set smartcase
+set multiple-cursors
+set clipboard+=unnamed
+set ideajoin
+set ideaput
+set relativenumber
+set number
+set surround
+set highlightedyank
+set relativenumber
+set idearefactormode=keep
+set ideajoin
+set showmode
+set NERDTree
+
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
+
+noremap <SPACE> <Nop>
+" nnoremap <SPACE> :
+
+imap jk <ESC>
+imap kj <ESC>
+
+nmap zj o<ESC>k
+nmap zk O<ESC>j
+
+
+let mapleader = " "
+
+"noremap <Esc> <nop>
+nmap <S-Enter> O<Esc>
+" nmap <CR> o<Esc>
+
+" nnoremap <C-j> :m +1<CR>
+" nnoremap <C-k> :m -2<CR>
+" inoremap <C-j> <Esc>:m +1<CR>gi
+" inoremap <C-k> <Esc>:m -2<CR>gi
+
+" system clipboard
+vmap <leader>yiw "+yiw
+nmap <leader>yiw "+yiw
+vmap <leader>y "+y
+vmap <leader>d "_d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+
+map mc <A-n>
+nnoremap mp :action PasteMultiple <CR>
+nnoremap R :action RenameElement <CR>
+
+" formatting
+nnoremap == :action ReformatCode <CR>
+vnoremap == :action ReformatCode <CR>
+nnoremap -- :action OptimizeImports <CR>
+vnoremap -- :action OptimizeImports <CR>
+
+nnoremap cc :action CommentByLineComment <CR>
+vnoremap cc :action CommentByLineComment <CR>
+
+nnoremap ,a :action GotoAction <CR>
+vnoremap ,a :action GotoAction <CR>
+
+" split window
+nnoremap <leader>sv :action SplitVertically <CR>
+nnoremap <leader>sd :action SplitHorizontally <CR>
+nnoremap <leader>sc :action UnsplitAll <CR>
+nnoremap <leader>v :action NextSplitter <CR>
+
+" search
+nmap <leader>fp :action FindInPath<CR>
+vmap <leader>fp :action FindInPath<CR>
+nnoremap U :action FindUsages <CR>
+vnoremap U :action FindUsages <CR>
+nnoremap ,e :action SearchEverywhere <CR>
+
+
+" extract
+nnoremap <leader>iv :action IntroduceVariable <CR>
+nnoremap <leader>em :action ExtractMethod  <Cr>
+vnoremap <leader>em :action ExtractMethod  <Cr>
+nnoremap <leader>ic :action IntroduceConstant <CR>
+
+" file navigation
+"nnoremap gh :action Back <CR>
+"nnoremap gl :action Forward <CR>
+nnoremap gj :action MethodDown <CR>
+nnoremap gk :action MethodUp <CR>
+nnoremap gs :action GotoSuperMethod <CR>
+nnoremap gi :action GotoImplementation <CR>
+nnoremap g, :action JumpToLastChange <CR>
+nnoremap g. :action JumpToNextChange <CR>
+nnoremap gd :action GotoDeclaration <CR>
+nnoremap gr :action RecentFiles <CR>
+nnoremap <leader>gc :action GotoClass <CR>
+vnoremap <leader>gc :action GotoClass <CR>
+nnoremap <leader>gf :action GotoFile <CR>
+vnoremap <leader>gf :action GotoFile <CR>
+nnoremap <leader>ww :action HideAllWindows <CR>
+nnoremap gp :NERDTree <CR>
+nnoremap gn :NERDTreeToggle<CR>
+nnoremap <leader>gt :action GotoTest <CR>
+nnoremap <leader>rc :action RunClass <CR>
+nnoremap ,rc :action ChooseRunConfiguration <CR>
+nnoremap <leader>gq :action QuickList.Git <CR>
+nnoremap <leader>ns :action NewScratchFile <CR>
+nnoremap <leader>nf :action NewElementSamePlace <CR>
+nnoremap <leader>ge :action Generate<CR>
+vnoremap <leader>re :action Replace<CR>
+nnoremap <leader>re :action Replace<CR>
+vnoremap / :action Find<CR>
+nnoremap / :action Find<CR>
+nnoremap <leader>ss :action SelectInProjectView<CR>
+
+" useful
+nnoremap <C-A> gg<S-v>G
+
+" yaswanth's
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-x> <C-w><C-x>
+nnoremap <C-m> <C-w><C-m>
+
+map gh <Action>(ShowErrorDescription)
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+"https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
+nnoremap <C-t> :action Terminal.OpenInTerminal<CR>
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+
+nnoremap gc :action GotoClass<CR>
+"Other ideavim files"
+"https://github.com/JetBrains/ideavim/discussions/303"
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(Run)
+map <leader>c <Action>(Stop)
+
+noremap ge :action GotoNextError<CR>
+"noremap gpe :action GotoPreviousError<CR>
